@@ -30,14 +30,14 @@ class _InputPageState extends State<InputPage> {
       print("Male Tapped 1");
     }
     if (gender == 2) {
-      //   if (femaleCardColor == inactiveCardColor) {
-      //     femaleCardColor = activeCardColor;
-      //     maleCardColor = inactiveCardColor;
-      //   } else {
-      //     femaleCardColor = inactiveCardColor;
-      //   }
+      if (femaleCardColor == inactiveCardColor) {
+        femaleCardColor = activeCardColor;
+        maleCardColor = inactiveCardColor;
+      } else {
+        femaleCardColor = inactiveCardColor;
+      }
+      print("FeMale Tapped 2");
     }
-    print("FeMale Tapped 2");
   }
 
   // void updateMale() {
@@ -69,7 +69,7 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        updateColor(2);
+                        updateColor(1);
                       });
                       // print("Male Tapped");
                     },
