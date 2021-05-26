@@ -6,12 +6,10 @@ class BoxContainer extends StatelessWidget {
   final Widget childCard;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        child: childCard,
-        margin: EdgeInsets.all(15.0),
-        color: colour,
-      ),
+    return Container(
+      child: childCard,
+      margin: EdgeInsets.all(15.0),
+      color: colour,
     );
   }
 }
