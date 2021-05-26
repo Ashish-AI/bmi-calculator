@@ -33,3 +33,25 @@ class IconContent extends StatelessWidget {
     );
   }
 }
+
+// void updateColor(int gender) {
+//     // 1 for male
+//     if (gender == 1) {
+//       if (maleActiveColor == inactiveCardColor) {
+//         print("maleActive");
+//         maleActiveColor = activeCardColor;
+//         femaleActiveColor = inactiveCardColor;
+//       } else {
+//         maleActiveColor = inactiveCardColor;
+//       }
+//     }
+//     // 2 for female
+//     if (gender == 2) {
+//       if (femaleActiveColor == inactiveCardColor) {
+//         femaleActiveColor = activeCardColor;
+//         maleActiveColor = inactiveCardColor;
+//       } else {
+//         femaleActiveColor = inactiveCardColor;
+//       }
+//     }
+//   }
