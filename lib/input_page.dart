@@ -248,9 +248,15 @@ class _InputPageState extends State<InputPage> {
               onTap: () {
                 Navigator.pushNamed(context, '/result');
               },
-              child: Text("Calculate"),
+              child: Center(
+                child: Text(
+                  "Calculate",
+                  style: kLargeButtonStyle,
+                ),
+              ),
             ),
             color: bottomContainerColor,
+            padding: EdgeInsets.only(bottom: 10.0),
             height: bottomContainerHeight,
             width: double.infinity,
           )
