@@ -4,11 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const bottomContainerHeight = 80.0;
-const activeCardColor = Color(0xFF1D1E33);
-const inactiveCardColor = Color(0xFF111328);
-const bottomContainerColor = Color(0xFFEB1555);
+import 'constants.dart';
 
 enum Gender { male, female }
 
@@ -22,6 +18,7 @@ class _InputPageState extends State<InputPage> {
   Color femaleCardColor = inactiveCardColor;
 
   Gender selectedGender;
+  int height = 180;
 
   // void updateColor(Gender selectedGender) {
   //   if (selectedGender == Gender.male) {
@@ -51,6 +48,7 @@ class _InputPageState extends State<InputPage> {
         title: Text("BMI Calculator"),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -96,6 +94,43 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: BoxContainer(
               colour: activeCardColor,
+              childCard: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Height",
+                    // textAlign: TextAlign.center,
+                    style: labelTextStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
+                      Text(
+                        height.toString(),
+                        style: numberTextStyle,
+                      ),
+                      Text(
+                        "cm",
+                        style: labelTextStyle,
+                      )
+                    ],
+                  ),
+                  Slider(
+                      value: height.toDouble(),
+                      min: 120.0,
+                      max: 220.0,
+                      activeColor: Color(0xFFEB1555),
+                      inactiveColor: Color(0xFF8D8E98),
+                      onChanged: (double newValue) {
+                        // print(newValue);
+                        setState(() {
+                          height = newValue.round();
+                        });
+                      })
+                ],
+              ),
             ),
           ),
           Expanded(
