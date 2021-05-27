@@ -74,11 +74,12 @@ class _InputPageState extends State<InputPage> {
                       // print("Male Tapped");
                     },
                     child: BoxContainer(
+                      colour: maleCardColor,
                       childCard: IconContent(
                         icon: FontAwesomeIcons.mars,
                         label: "Male",
                       ),
-                      colour: activeCardColor,
+                      // colour: activeCardColor,
                     ),
                   ),
                 ),
@@ -91,11 +92,13 @@ class _InputPageState extends State<InputPage> {
                       // print("Female Tapped");
                     },
                     child: BoxContainer(
+                      colour: femaleCardColor,
+
                       childCard: IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: "Female",
                       ),
-                      colour: activeCardColor,
+                      // colour: activeCardColor,
                     ),
                   ),
                 ),
