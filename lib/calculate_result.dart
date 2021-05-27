@@ -25,6 +25,25 @@ class CalculateResult extends StatelessWidget {
             flex: 5,
             child: BoxContainer(
               colour: activeCardColor,
+              childCard: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Normal",
+                    style: kResultStyle,
+                  ),
+                  Text(
+                    "26.2",
+                    style: kBMI_Index,
+                  ),
+                  Text(
+                    "Your BMI result is quite low, you need to eat more ! ",
+                    style: kBodyStyle,
+                    textAlign: TextAlign.center,
+                  )
+                ],
+              ),
             ),
           )
         ],
