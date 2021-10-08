@@ -14,6 +14,7 @@ class CalculateResult extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("BMI Calculator"),
+        brightness: Brightness.dark,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
