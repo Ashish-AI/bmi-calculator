@@ -4,7 +4,11 @@ import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/material.dart';
 
 class CalculateResult extends StatelessWidget {
-  CalculateResult({this.bmi, this.details, this.result});
+  CalculateResult({
+    this.bmi,
+    this.details,
+    this.result,
+  });
   final String bmi;
   final String result;
   final String details;
@@ -46,10 +50,13 @@ class CalculateResult extends StatelessWidget {
                     bmi,
                     style: kBMI_Index,
                   ),
-                  Text(
-                    details,
-                    style: kBodyStyle,
-                    textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      details,
+                      style: kBodyStyle,
+                      textAlign: TextAlign.center,
+                    ),
                   )
                 ],
               ),

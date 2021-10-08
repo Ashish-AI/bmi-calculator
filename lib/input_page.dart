@@ -27,27 +27,6 @@ class _InputPageState extends State<InputPage> {
   int weight = 60;
   int age = 19;
 
-  // void updateColor(Gender selectedGender) {
-  //   if (selectedGender == Gender.male) {
-  //     if (maleCardColor == inactiveCardColor) {
-  //       maleCardColor = activeCardColor;
-  //       femaleCardColor = inactiveCardColor;
-  //     } else {
-  //       maleCardColor = inactiveCardColor;
-  //     }
-  //     print("Male Tapped 1");
-  //   }
-  //   if (selectedGender == Gender.female) {
-  //     if (femaleCardColor == inactiveCardColor) {
-  //       femaleCardColor = activeCardColor;
-  //       maleCardColor = inactiveCardColor;
-  //     } else {
-  //       femaleCardColor = inactiveCardColor;
-  //     }
-  //     print("FeMale Tapped 2");
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
