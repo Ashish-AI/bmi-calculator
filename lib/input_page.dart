@@ -4,11 +4,12 @@ import 'package:bmi_calculator/Calculator_functionality.dart';
 import 'package:bmi_calculator/calculate_result.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'icon_content.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
-import 'raw_btn_class.dart';
+
 import 'bottom_button.dart';
+import 'constants.dart';
+import 'icon_content.dart';
+import 'raw_btn_class.dart';
+import 'reusable_card.dart';
 
 enum Gender { male, female }
 
@@ -52,6 +53,7 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("BMI Calculator"),
+        brightness: Brightness.dark,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -73,7 +75,6 @@ class _InputPageState extends State<InputPage> {
                       icon: FontAwesomeIcons.mars,
                       label: "Male",
                     ),
-                    // colour: activeCardColor,
                   ),
                 ),
                 Expanded(
